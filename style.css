@@ -971,7 +971,73 @@ footer {
   transform: scale(1.15);
   filter: drop-shadow(0 0 6px rgba(225,48,108,.6));
 }
+/* --- ACORDEÃO DE SEO (ÁREAS DE ATENDIMENTO) --- */
+.seo-regions-section {
+  padding: 40px 0;
+  background-color: #f8f9fa; /* Um cinza bem claro para diferenciar sutilmente */
+  border-top: 1px solid #eaeaea;
+}
 
+.seo-accordion {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seo-accordion summary {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.seo-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.seo-accordion summary:hover {
+  background: #f1f1f1;
+}
+
+.seo-accordion summary::after {
+  content: "▼";
+  font-size: 0.8rem;
+  color: #888;
+  transition: transform 0.3s ease;
+}
+
+.seo-accordion[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.seo-accordion-content {
+  padding: 20px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.region-group h4 {
+  font-family: 'Oswald', sans-serif;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.region-group p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
 
 /* ── FOOTER PHONE LINK ──────────────────────────────── */
 .footer-phone {
