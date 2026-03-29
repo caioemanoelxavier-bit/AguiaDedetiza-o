@@ -164,55 +164,62 @@ nav a:hover { color: var(--gold); }
 .process-card p { font-size: .85rem; color: rgba(245,230,211,.55); }
 
 /* ==========================================================================
-   SERVIÇOS (Estrutura Infográfico)
+   SERVIÇOS (Novo Layout Profissional)
    ========================================================================== */
 .servicos-section { padding: 6rem 0; border-bottom: 1px solid rgba(245,194,0,.15); }
-.srv-top-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-.srv-top-block { border-radius: var(--radius); overflow: hidden; }
-.srv-top-label { font-family: var(--font-display); font-size: .7rem; text-transform: uppercase; text-align: center; padding: .55rem 1rem; color: #fff; }
 
-.srv-top-dtt .srv-top-label { background: #1a2d5a; }
-.srv-top-esp .srv-top-label { background: #7a0e0e; }
-
-.srv-row-inner { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; }
-.srv-top-dtt .srv-row-inner { background: linear-gradient(135deg, rgba(26,45,90,.6), rgba(15,25,55,.85)); border: 1px solid rgba(80,120,220,.2); }
-.srv-top-esp .srv-row-inner { background: linear-gradient(135deg, rgba(110,15,15,.6), rgba(65,8,8,.85)); border: 1px solid rgba(200,60,60,.2); }
-
-.srv-list { display: flex; flex-direction: column; gap: .6rem; }
-.srv-item { display: flex; align-items: center; gap: .85rem; }
-.srv-left { flex: 1; display: flex; align-items: center; gap: 1rem; padding: .95rem 1.3rem; border-radius: 50px; border: 1px solid transparent; }
-
-.srv-badge { 
-  width: 50px; height: 50px; border-radius: 50%; 
-  display: flex; align-items: center; justify-content: center; 
-  font-family: var(--font-display); font-weight: 700; color: #fff; 
-  border: 2px solid rgba(255,255,255,.12); 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
 }
-.srv-badge--blue { background: #1e3a8a; } 
-.srv-badge--red { background: #991b1b; }
-.srv-badge--teal { background: #0f766e; } 
-.srv-badge--gold { background: #92400e; color:#fef3c7; }
-.srv-badge--cyan { background: #155e75; } 
-.srv-badge--brown { background: #78350f; }
 
-.srv-item:nth-child(1) .srv-left { background: rgba(15,118,110,.2); border-color: rgba(20,184,166,.18); }
-.srv-item:nth-child(2) .srv-left { background: rgba(146,64,14,.2); border-color: rgba(245,158,11,.18); }
-.srv-item:nth-child(3) .srv-left { background: rgba(21,94,117,.2); border-color: rgba(6,182,212,.18); }
-.srv-item:nth-child(4) .srv-left { background: rgba(120,53,15,.2); border-color: rgba(180,100,40,.18); }
+.service-card {
+  background: linear-gradient(160deg, rgba(43,12,5,.4), rgba(13,4,1,.7));
+  border: 1px solid rgba(245,194,0,.15);
+  border-radius: var(--radius);
+  padding: 2rem 1.8rem;
+  transition: transform var(--transition), border-color var(--transition);
+}
 
-/* CORREÇÃO AQUI: Faltavam as chaves no flex: 1; */
-.srv-details { flex: 1; }
-.srv-details strong { font-family: var(--font-display); color: var(--white); text-transform: uppercase; font-size: .88rem; display:block; margin-bottom:.25rem; }
-.srv-details ul { padding-left: 1rem; font-size: .82rem; color: rgba(245,230,211,.65); }
-.srv-icon-no { font-size: 1.5rem; opacity: .8; }
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(245,194,0,.4);
+  background: linear-gradient(160deg, rgba(43,12,5,.6), rgba(13,4,1,.85));
+}
 
-.srv-tag { width: 126px; border-radius: 50px; padding: .5rem; font-family: var(--font-display); font-size: .68rem; text-transform: uppercase; text-align: center; color: #fff; }
-.srv-tag--teal { background: #0f766e; } 
-.srv-tag--gold { background: #92400e; } 
-.srv-tag--cyan { background: #155e75; } 
-.srv-tag--brown { background: #78350f; }
+.service-icon {
+  width: 52px; height: 52px;
+  background: rgba(245,194,0,.08);
+  border: 1px solid rgba(245,194,0,.2);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
 
-.srv-footer-note { margin-top: 2.5rem; text-align: center; font-family: var(--font-display); font-size: .75rem; text-transform: uppercase; color: rgba(245,194,0,.35); }
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: rgba(245,230,211,.65);
+  line-height: 1.6;
+}
+
+.srv-footer-note { 
+  margin-top: 2.5rem; 
+  text-align: center; 
+  font-family: var(--font-display); 
+  font-size: 0.8rem; 
+  text-transform: uppercase; 
+  color: rgba(245,194,0,.45); 
+}
 
 /* ==========================================================================
    FAQ SECTION (Dúvidas Frequentes)
@@ -291,6 +298,7 @@ footer { background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark) 100%)
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--dark); }
 ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--gold-dark), var(--orange)); border-radius: 3px; }
+
 /* ==========================================================================
    ANIMAÇÕES DE ROLAGEM (Scroll Reveal)
    ========================================================================== */
@@ -327,22 +335,45 @@ footer { background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark) 100%)
   opacity: 0;
   animation: fadeUpIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
 }
+
 /* ==========================================================================
-   RESPONSIVIDADE (Tudo unificado aqui)
+   RESPONSIVIDADE (Telas Menores e Celulares)
    ========================================================================== */
 @media (max-width: 768px) {
+  /* Alinhamento do Header */
+  .header-content { flex-direction: column; gap: 1.2rem; }
+  nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 1rem; }
+  
+  /* Ajuste de Espaçamentos Gerais */
+  .hero, .process-section, .servicos-section, .faq-section, .contato-section {
+    padding: 4rem 0; 
+  }
+  
+  /* Grids quebrando para colunas */
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .process-grid { grid-template-columns: 1fr 1fr; }
-  .srv-top-row { grid-template-columns: 1fr; }
-  .srv-item { flex-direction: column; align-items: stretch; }
-  .srv-tag { width: 100%; border-radius: var(--radius-sm); }
-  .footer-grid { grid-template-columns: 1fr; }
-  .header-content { flex-wrap: wrap; justify-content: center;}
-  nav { width: 100%; justify-content: center;}
   .faq-grid { grid-template-columns: 1fr; gap: 0; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  
+  /* Tipografia */
+  .hero-text h2 { font-size: 2.6rem; }
+  .section-header h2 { font-size: 2rem; }
 }
 
 @media (max-width: 480px) {
-  .process-grid { grid-template-columns: 1fr; }
-  .hero-text h2 { font-size: 2.3rem; }
+  /* Processos e Serviços para 1 coluna no celular */
+  .process-grid, .services-grid { grid-template-columns: 1fr; }
+  
+  /* Ajustes finos de texto no mobile */
+  .hero-text h2 { font-size: 2.1rem; }
+  .hero-features { flex-direction: column; gap: 0.5rem; }
+  .glass-card { max-width: 100%; padding: 1.8rem; }
+  
+  /* Botões de chamada para ação viram blocos inteiros (largura total) */
+  .hero-actions { flex-direction: column; width: 100%; gap: 0.8rem; }
+  .btn-primary, .btn-outline { width: 100%; text-align: center; }
+  
+  /* Ajuste do botão do WhatsApp flutuante */
+  .whatsapp-float { bottom: 1.5rem; right: 1.5rem; padding: 0.6rem 1.2rem; }
+  .whatsapp-float span { font-size: 0.75rem; }
 }
