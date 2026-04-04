@@ -38,7 +38,7 @@ body::before {
 .container { max-width: 1100px; margin: 0 auto; padding: 0 1.75rem; position: relative; z-index: 1; }
 
 /* ==========================================================================
-   BOTÕES E COMPONENTES GERAIS (Otimizado DRY)
+   BOTÕES E COMPONENTES GERAIS
    ========================================================================== */
 .whatsapp-float {
   position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
@@ -53,7 +53,6 @@ body::before {
 }
 .whatsapp-float:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 12px 36px rgba(0,0,0,.5), 0 0 24px rgba(37,211,102,.3); }
 
-/* Classe base para reduzir código repetido */
 .btn {
   text-decoration: none; font-family: var(--font-display); font-size: .88rem; font-weight: 700;
   letter-spacing: .09em; text-transform: uppercase; border-radius: var(--radius-sm);
@@ -75,13 +74,32 @@ body::before {
    HEADER
    ========================================================================== */
 header { position: sticky; top: 0; z-index: 100; background: rgba(13,4,1,.88); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(245,194,0,.12); }
-.header-content { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
-.logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.header-content { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; }
+.logo { display: flex; align-items: center; gap: .8rem; text-decoration: none; }
 .logo-img { border-radius: 50%; object-fit: cover; }
-.logo-title { font-family: var(--font-display); font-size: 1.5rem; text-transform: uppercase; color: var(--white); line-height: 1; margin: 0; display:flex; gap: 5px; align-items: flex-start;}
+.logo-text { display: flex; flex-direction: column; }
+.logo-title { 
+  font-family: var(--font-display); 
+  font-size: 1.6rem; 
+  text-transform: uppercase; 
+  color: var(--white); 
+  line-height: 1.1; 
+  margin: 0; 
+  display: flex; 
+  gap: 6px; 
+}
 .logo-dedetizadora { color: var(--gold); }
-.logo-sub { font-size: 0.35em; color: rgba(245,194,0,.55); letter-spacing: .22em; display:block;}
-.logo-dedetizadora-wrap { display: flex; flex-direction: column; }
+.logo-sub-header { 
+  font-family: var(--font-display);
+  font-size: 0.75rem; 
+  color: rgba(245,194,0,.8); 
+  letter-spacing: .12em; 
+  text-transform: uppercase;
+  font-weight: 500;
+  align-self: flex-end; /* Alinha perfeitamente com o fim da palavra Dedetizadora */
+  margin-top: 2px;
+}
+
 nav { display: flex; align-items: center; gap: 1.75rem; }
 nav a { color: rgba(245,230,211,.7); text-decoration: none; font-size: .82rem; font-weight: 500; text-transform: uppercase; transition: color var(--transition); }
 nav a:hover { color: var(--gold); }
@@ -206,7 +224,8 @@ footer { background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark) 100%)
    RESPONSIVIDADE
    ========================================================================== */
 @media (max-width: 768px) {
-  .header-content { flex-direction: column; gap: 1.2rem; }
+  .logo-title { font-size: 1.3rem; }
+  .header-content { flex-direction: column; gap: 1rem; }
   nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 1rem; }
   .hero, .process-section, .servicos-section, .faq-section, .contato-section { padding: 4rem 0; }
   .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -227,7 +246,7 @@ footer { background: linear-gradient(180deg, var(--dark-2) 0%, var(--dark) 100%)
   .hero-features { flex-direction: column; gap: 0.5rem; }
   .glass-card { max-width: 100%; padding: 1.8rem; }
   .hero-actions { flex-direction: column; width: 100%; gap: 0.8rem; }
-  .btn { width: 100%; } /* Usa a classe unificada no mobile */
+  .btn { width: 100%; }
   .whatsapp-float { bottom: 1.5rem; right: 1.5rem; padding: 0.6rem 1.2rem; }
   .whatsapp-float span { font-size: 0.75rem; }
 }
