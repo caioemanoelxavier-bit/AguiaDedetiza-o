@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Águia Dedetizadora | Grupo Preventec | Controle Profissional de Pragas</title>
   
   <meta name="google-site-verification" content="1_opc87Gq9iZVO6ekgdNePe1wl_eMPH0mXSvwzw4LBQ" />
   
-  <link rel="stylesheet" href="style.css">
-</head> 
   <meta name="description" content="Águia Dedetizadora — Grupo Preventec. Controle profissional de pragas em São Paulo. Atendimento 24h na Zona Leste, Sul e Oeste. Orçamento grátis.">
   <meta name="keywords" content="dedetizadora, dedetização, controle de pragas, São Paulo, Zona Leste, Zona Sul, Zona Oeste, Aricanduva, Itaquera, Cidade Líder, Tatuapé, Moema, Morumbi, Centro, Vila Buarque, Guarulhos, 24h, Grupo Preventec">
   <meta name="robots" content="index, follow">
@@ -23,6 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -314,16 +314,40 @@
       <div class="footer-contact">
         <a href="https://wa.me/5511910163691" target="_blank" rel="noopener noreferrer" class="footer-phone"><i data-lucide="phone"></i> (11) 91016-3691</a>
         <a href="https://www.instagram.com/aguiadedetizadorasp" target="_blank" rel="noopener noreferrer" class="footer-instagram">
-          <i data-lucide="instagram"></i> @aguiadedetizadorasp
+          <i class="fa-brands fa-instagram"></i> @aguiadedetizadorasp
         </a>
       </div>
     </div>
+    
     <div class="footer-bottom">
-      © <span id="year">2026</span> Águia Dedetizadora — Grupo Preventec. Todos os direitos reservados.
+      <div class="copyright">
+        © <span id="year">2022</span> Águia Dedetizadora — Grupo Preventec. Todos os direitos reservados.
+      </div>
+      <div class="developer-credit">
+        <span>Desenvolvido por <strong>Caio Moraes</strong></span>
+        <a href="https://wa.me/11993695013" target="_blank" rel="noopener noreferrer" class="dev-link" title="Solicite um orçamento para o seu site!">
+          <i data-lucide="code"></i> Quero um site assim
+        </a>
+      </div>
     </div>
   </footer>
 
   <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      lucide.createIcons();
+      
+      window.addEventListener('scroll', () => {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(reveal => {
+          const windowHeight = window.innerHeight;
+          const revealTop = reveal.getBoundingClientRect().top;
+          if (revealTop < windowHeight - 100) {
+            reveal.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
