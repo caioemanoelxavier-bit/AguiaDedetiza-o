@@ -39,13 +39,13 @@ Este documento contém ações práticas para melhorar o posicionamento orgânic
 
 ### Como otimizar o Google Business Profile:
 
-1. **Nome da empresa**: Use "Águia Dedetizadora - Grupo Preventec"
+1. **Nome da empresa**: Use "Dedetizadora em São Paulo 24h | Águia Dedetizadora"
 2. **Categoria principal**: "Serviço de dedetização"
 3. **Categorias secundárias**: "Serviço de controle de pragas", "Empresa de limpeza"
 4. **Área de atendimento**: Selecione São Paulo + cidades da Grande SP
 5. **Horário**: "Aberto 24 horas" (conforme atendimento real)
 6. **Telefone**: (11) 91016-3691
-7. **Site**: https://aguiadedetizadora.com.br/
+7. **Site**: https://aguiadedetizadora.com
 8. **Fotos**: Adicione logo, fotos da equipe, veículos e equipamentos
 9. **Posts semanais**: Publique promoções, dicas e atualizações
 
