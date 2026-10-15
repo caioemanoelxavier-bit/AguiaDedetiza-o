@@ -6,7 +6,7 @@
 
 Site criado para apresentar a empresa Águia Dedetizadora ao público, com foco em transmitir profissionalismo, destacar os serviços oferecidos e facilitar o contato com o cliente.
 
-**URL**: https://aguiadedetizadora.com.br/
+**URL**: https://aguiadedetizadora.com
 
 ## ⚙️ Funcionalidades
 
