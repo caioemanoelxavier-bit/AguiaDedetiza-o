@@ -40,8 +40,8 @@ Este documento contém ações práticas para melhorar o posicionamento orgânic
 ### Como otimizar o Google Business Profile:
 
 1. **Nome da empresa**: Use "Dedetizadora em São Paulo 24h | Águia Dedetizadora"
-2. **Categoria principal**: "Serviço de dedetização"
-3. **Categorias secundárias**: "Serviço de controle de pragas", "Empresa de limpeza"
+2. **Categoria principal**: "Serviço de Controle de Pragas "
+3. **Categorias secundárias**:"Serviço de controle de cupim, Controle de rato e Limpeza de caixa d’água"
 4. **Área de atendimento**: Selecione São Paulo + cidades da Grande SP
 5. **Horário**: "Aberto 24 horas" (conforme atendimento real)
 6. **Telefone**: (11) 91016-3691
